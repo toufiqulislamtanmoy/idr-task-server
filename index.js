@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const sqlite3 = require('sqlite3');
 
 const app = express();
+app.use(cors());
 const port = 3001;
 
 const db = new sqlite3.Database('./dua_main.sqlite');
